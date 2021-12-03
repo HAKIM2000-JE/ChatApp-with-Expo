@@ -1,0 +1,32 @@
+
+<div class="container  " style="position: absolute; top: 15%; left: 35%;">
+    <div class="header">
+      <h2>Create Account</h2>
+    </div>
+    <form id="form" class="form" (ngSubmit)="register(f)" #f="ngForm"  >
+      <div class="form-control">
+        <label for="username">Username</label>
+        <input type="text" placeholder=""  id="username" name="username" required minlength="3" ngModel />
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation-circle"></i>
+        <small>Error message</small>
+      </div>
+      
+      <div class="form-control">
+        <label for="username">Password</label>
+        <input type="password" placeholder=""  name="password" required minlength="3" ngModel id="password" />
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation-circle"></i>
+        <small>Error message</small>
+      </div>
+     
+      <button style="cursor: pointer;" >Submit</button>
+    </form>
+   
+
+
+  </div>
+  
+  <!-- SOCIAL PANEL HTML -->
+ 
+  

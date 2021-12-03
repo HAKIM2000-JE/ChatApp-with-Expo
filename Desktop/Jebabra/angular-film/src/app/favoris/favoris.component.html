@@ -1,0 +1,60 @@
+
+
+
+    <div class="container" >
+         <h1 class="mb-4" style="font-size: 40px; color: white;" >Liked Films </h1>
+         
+
+
+         <ng-container *ngFor="let film of films ">
+
+            
+       
+            <div class="card mt-4" style="background-color: black; color: white; font-size: 50px;" >
+
+                <div class="card-body">
+                    <h4 class="card-title" style="font-size: 30px;"> {{ film.title }}</h4>
+
+                    <h6 class="card-title"  style="font-size: 15px;" > {{ film.overview}}</h6>
+
+                   
+                    <div class="card-text mb-2" >
+
+                         <img src="{{ film.poster_path }} "   alt=""/>
+                    </div>
+
+                   
+                  
+
+                </div>
+                  
+              </div>
+
+
+
+
+         </ng-container>
+
+
+
+
+
+
+
+      
+    </div>
+
+
+    <style>
+
+        img{
+            width: 250px;
+            object-fit: contain;
+        }
+
+        .container{
+            margin-left: 10%;
+            width: 90%;
+        }
+    </style>
+    

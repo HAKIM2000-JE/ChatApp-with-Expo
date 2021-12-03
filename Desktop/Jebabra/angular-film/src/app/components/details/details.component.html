@@ -1,0 +1,71 @@
+<div class="">
+  
+</div>
+
+
+
+
+<section id="banner" style="background-image: url({{film.poster_path}}) ;"  class="clearfix">
+  <div id="banner_content_wrapper">
+    <div id="poster">
+      <img src="{{ film.poster_path }}" alt="Deadpool Movie Poster" class="featured_image">
+      <img src="https://res.cloudinary.com/dw369yzsh/image/upload/v1470916845/play_button_ngnw1z.png" alt="Play Trailer" class="play_button">
+    </div>
+    <div id="content">
+      <h1 class="title">{{film.title}}</h1>
+      <div class="ratings">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star inactive"></i>
+      </div>
+
+      <p class="description">{{film.overview}}}</p>
+
+      <p class="info" style="font-size: 15px;" >Vote average : {{film.vote_average}} <span>|</span>{{film.release_date}}</p>
+    </div>
+  </div>
+</section>
+            
+
+
+
+<form action="search-form" #form ="ngForm" (ngSubmit)="OnSubmit()" >
+ 
+  
+
+  <input type="text"  name="contenu" ngModel [(ngModel)]="contenu" placeholder="Votre Commentaire" >
+  <button  >send</button>
+
+
+
+</form>
+
+
+<ng-container *ngFor="let commentaire of Commentaires">
+
+
+
+  <h2 style="color: wheat;">{{commentaire.contenu}}</h2>
+
+
+
+      
+
+  
+
+
+  
+
+     
+  
+
+  
+ 
+</ng-container>
+
+
+
+
+
